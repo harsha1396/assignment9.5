@@ -1,0 +1,35 @@
+1)Explain the core components of flume:-
+
+The core components of Flume are:-
+Event:The single log entry or unit of data that is transported.
+Source:This is the component through which data enters Flume workflows.
+Sink:It is responsible for transporting data to the desired destination.
+Client:The component that transmits event to the source that operates with the agent.
+Agent:Any JVM that runs Flume.
+Channel:It is the duct between the Sink and Source.
+
+2)Can flume provide 100% reliability while transfering the data:-
+
+Apache Flume provides end to end reliability because of its transactional approach in data flow.
+Flume uses channel-based transactions to guarantee reliable message delivery.
+This channel is responsible to pass reliably from end to end flow.
+
+3)Explain the consolidation in flume:-
+
+Consolidation in Flume collects data from different sources and from different Flume agents.
+Flume sources collects data from different sources and they flow through channel and sink.
+The collected data is send to HDFS or the target destination.
+
+4)Explain what is an event in flume:-
+
+An Event is a unit of data that flows through a Flume agent.
+The Event flows from Source to Channel to Sink and is represented by an implementation of the Event interface.
+An Event carries a payload that is accompanied by an optional set of headers. 
+Events flows from an external source to a external destination.
+
+5)Explain what is an agent in flume:-
+
+A Flume agent is a process that hosts the components through which events flow from an external source to the external destination.
+The events are staged in a channel on each agent. 
+Flume agent configuration is stored in a local configuration file.
+
